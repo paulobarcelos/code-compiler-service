@@ -4,7 +4,6 @@ const compiler = require('../compiler.js')
 module.exports = async (request, response) => {
 	server.recursivelyClearOld()
 	await compiler.init()
-
 	response.setHeader('Access-Control-Allow-Origin', '*')
 	if (request.url.length === 1) {
 		server.indexRequest(request, response)
